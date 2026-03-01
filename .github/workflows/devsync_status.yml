@@ -1,0 +1,20 @@
+name: DevSync 24f2004213@ds.study.iitm.ac.in
+run-name: Status Check for 24f2004213@ds.study.iitm.ac.in
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: 24f2004213@ds.study.iitm.ac.in
+        run: |
+          echo "Workflow executed successfully for 24f2004213@ds.study.iitm.ac.in"
+          date > status.log
